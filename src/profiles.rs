@@ -29,6 +29,7 @@ impl Config {
     }
 
     pub fn path() -> PathBuf {
+        println!("checking path");
         let conf_dir = dirs::config_dir().unwrap_or_default().join("lazycloud");
 
         if conf_dir.exists() {

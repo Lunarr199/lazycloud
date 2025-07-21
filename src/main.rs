@@ -16,10 +16,11 @@ mod profiles;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args = Cli::parse();
-    let config = Config::load()?;
 
     match args.command {
         Commands::Sync { action } => {
+            let config = Config::load()?;
+
             match action {
                 SyncAction::All => {
                     println!("{}", "Syncing all profiles...".bold().underline().blue());
@@ -43,6 +44,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         Commands::Init => init_config()?,
 
         Commands::List => {
+            let config = Config::load()?;
+
             println!("{}", "Profiles List".bold().underline().blue());
 
             for profile in config.sync.iter() {
@@ -65,6 +68,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             interval,
             __run,
         } => {
+            let config = Config::load()?;
+
             if __run {
                 match action {
                     SyncAction::Profile { name } => {
@@ -129,6 +134,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                 stop_profile(&name)?;
             }
             SyncAction::All => {
+                let config = Config::load()?;
+
                 for profile in config.sync.iter() {
                     if let Err(err) = stop_profile(&profile.name) {
                         eprintln!(
