@@ -13,7 +13,7 @@ This is a wrapper for rclone, and its main task is to make syncing commands shor
 - Watch profiles at intervals
 
 ## > Install
-Find the correct binary version in the Releases and move them to somewhere in your PATH.
+Find the correct binary version in the [Releases](https://github.com/Lunarr199/lazycloud/releases) and move them to somewhere in your PATH.
 
 Run `lazycloud --help` to check.
 
