@@ -1,6 +1,5 @@
 use clap::Parser;
 use commands::{Cli, Commands, SyncAction};
-use nix::NixPath;
 use owo_colors::OwoColorize;
 use profiles::{Config, Profile};
 use std::{
@@ -154,7 +153,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
                     println!("{} {}", "Running:".green().bold(), name.italic());
                 }
-            } else if pid_dir.is_empty() {
+            } else {
                 println!("{}", "No watchers are running.".dimmed());
             }
         }
