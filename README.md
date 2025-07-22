@@ -18,11 +18,11 @@ Find the correct binary version in the [Releases](https://github.com/lunar1um/la
 Run `lazycloud --help` to check.
 
 ## > Usage
-### Initialize
+### Configuration
 ```bash
 lazycloud init
 ```
-which creates a default config (`config.toml`) that looks like this:
+which creates a default config (`config.toml`) that looks something like this:
 
 ```toml
 # lazycloud config
@@ -35,7 +35,31 @@ which creates a default config (`config.toml`) that looks like this:
 # flags = "--progress" # any flags that are normally supported in rclone
 ```
 
-Note: every path has to be full path.
+#### Name (`name`)
+The name of the profile that will be the unique identifier of it throughout the usage of this cli.
+
+#### From and To (`from` & `to`)
+Self-explanatory, just make sure they are full path.
+
+#### Modes (`mode`)
+There are currently 4 modes (more to be added)
+- mirror: copies new/ changed files to the destination, and **delete files from destination that don't exist in source**.
+- replace: same as `mirror`, but also delete files that **match exclude patterns**.
+- copy: copy without deleting anything
+- move: move files to destination and **delete them from source**.
+
+#### Flags (`flags`)
+Any additional flags that you normally use in rclone. 
+
+#### Example:
+```toml
+[[sync]]
+name = "projects"
+from = "/home/[computer-name]/Projects" # note it can be file or folder
+to = "gdrive:Projects" # a folder named "Projects" on Google Drive
+mode = "replace"
+flags = "--progress" # display progress for easy tracking
+```
 
 ### Sync commands
 1. Sync a single profile
