@@ -1,11 +1,11 @@
 # > lazycloud ☁️
 
-A lazy CLI sync tool powered by [`rclone`](https://rclone.org/). Supports named profiles, auto-syncing in the background, and interval-based watchers.
+A lazy CLI sync tool powered by [`rclone`](https://github.com/rclone/rclone). Supports named profiles, auto-syncing in the background, and interval-based watchers.
 
 ---
 
 ## > Expectations
-This is a wrapper for rclone, and its main task is to make syncing commands shorter, and doesn't need to memorize (for lazy people like me), and there are some extra features to make your life easier. However, you still need to set up rclone like everyone else before using it (I know you are lazy, but it's easy c'mon).
+This is a wrapper (built over) for [rclone](https://github.com/rclone/rclone), and its main task is to make syncing commands shorter, and doesn't need to memorize (for lazy people like me), and there are some extra features to make your life easier. However, you still need to set up rclone like everyone else before using it (I know you are lazy, but it's easy c'mon).
 
 ## > Features
 - Easy profile-based config
