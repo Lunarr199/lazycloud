@@ -60,6 +60,7 @@ to = "gdrive:Projects" # a folder named "Projects" on Google Drive
 mode = "replace"
 flags = "--progress" # display progress for easy tracking
 ```
+<img width="447" height="518" alt="beautiful illustration" src="https://github.com/user-attachments/assets/102f3b0f-3ff1-42f7-88ba-45339759ec26" />
 
 ### Sync commands
 1. Sync a single profile
