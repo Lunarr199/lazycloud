@@ -60,7 +60,18 @@ to = "gdrive:Projects" # a folder named "Projects" on Google Drive
 mode = "replace"
 flags = "--progress" # display progress for easy tracking
 ```
-<img width="447" height="518" alt="beautiful illustration" src="https://github.com/user-attachments/assets/102f3b0f-3ff1-42f7-88ba-45339759ec26" />
+
+<img width="447" height="518" alt="beautiful illustration" src="https://github.com/user-attachments/assets/102f3b0f-3ff1-42f7-88ba-45339759ec26" />  
+  
+>[!NOTE]
+> The value of `to` has the format of: `[REMOTE_NAME]:[TARGETTED_FOLDER]`
+
+For example:  
+
+<img width="313" height="136" alt="image" src="https://github.com/user-attachments/assets/82788196-09d5-4e84-a4e2-9b4d79272f3e" />  
+
+hence the value of `gdrive:Projects` in the example above  
+<sub>use `rclone config` to display and configure remotes</sub>  
 
 ### Sync commands
 1. Sync a single profile
